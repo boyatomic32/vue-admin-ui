@@ -1,0 +1,72 @@
+const columnList = [
+  {
+    dataIndex: 'id',
+    width: 80,
+    title: 'ID',
+    noTable: false,
+    sortable: 'custom',
+  },
+  {
+    dataIndex: 'name',
+    minWidth: 200,
+    align: 'left',
+    title: 'Name',
+    isForm: true,
+    valueType: 'input',
+    prop: [{ required: true, message: 'กรุณาป้อนชื่อ' }],
+    placeholder: 'กรุณาป้อนชื่อ',
+  },
+  {
+    dataIndex: 'phone',
+    width: 200,
+    title: 'Phone',
+    isForm: true,
+    valueType: 'input',
+    prop: [{ required: true, message: 'กรุณาป้อนเบอร์โทรศัพท์' }],
+  },
+  {
+    dataIndex: 'location',
+    width: 200,
+    title: 'Location',
+    isForm: true,
+    valueType: 'input',
+    prop: [{ required: true, message: 'กรุณาป้อนชื่อสถานที่' }],
+  },
+  {
+    dataIndex: 'tokenLine',
+    title: 'Token Line',
+    valueType: 'input',
+    inpuType: 'textarea',
+    noTable: true,
+    isForm: true,
+  },
+  {
+    dataIndex: 'status',
+    width: 200,
+    title: 'Status',
+    scopedSlots: { customRender: 'status' },
+    isForm: true,
+    valueType: 'switch',
+  },
+  {
+    dataIndex: 'lastupdate',
+    width: 200,
+    title: 'Update At',
+    scopedSlots: { customRender: 'date' },
+    valueType: 'date-picker',
+    attrs: {
+      type: 'date',
+      format: 'YYYY-MM-DD HH-mm-ss',
+      'start-placeholder': 'Please select Date',
+    },
+  },
+  {
+    dataIndex: 'actions',
+    fixed: 'right',
+    width: 180,
+    title: 'Actions',
+    scopedSlots: { customRender: 'actions' },
+  },
+]
+
+export { columnList }
